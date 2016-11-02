@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Basic To Do List</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+  <script src="/js/app.js"></script>
+
+</head>
+
+<body nd-controller="ToDoController as tCtrl">
+  <h1>Git'er Duuuuun!</h1>
+  <ul>
+    <li ng-repeat="todo in tCtrl.todos">
+        {{ tCtrl.todo }}
+    </li>
+  </ul>
+
+  <form ng-submit="tCtrl.addToDo()">
+      <input ng-model="tCtrl.todo.title" placeholder="a model idiot"  />
+      <input type="submit"  />
+  </form>
+
+</body>
+
+</html>
